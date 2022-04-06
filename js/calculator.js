@@ -15,6 +15,11 @@
    * DO NOT MODIFY THE CODE IN THIS SECTION *
    ******************************************/
 
+  /**
+  Add event listeners to each operator button in the interface.
+
+  @returns No value.
+  */
   function addCalculatorListeners() {
     for (let calcFunction of [clear, add, substract, multiply, divide, calculate]) {
       const control = document.querySelector("#" + calcFunction.name);
@@ -22,45 +27,66 @@
     }
   }
 
+  // Add event listeners
   addCalculatorListeners();
+
   /******************************************
    *       END OF UNMODIFIABLE SECTION      *
    ******************************************/  
 
-  let operand1;
+ /**
+  Resets the calculator to its initial state.
 
+  @returns No value.
+  */  
   function clear() {
     console.log("CLEAR");
   }
 
+ /**
+  Performs the addition operation.
+
+  @returns No value.
+  */
   function add() {
     console.log("ADD");
 
-    operand1 = document.querySelector("#operand").value;  
-    document.querySelector("#operand").value = "";
   }
 
+ /**
+  Performs the substraction operation.
+
+  @returns No value.
+  */  
   function substract() {
     console.log("SUBSTRACT");
   }
 
+ /**
+  Performs the multiplication operation.
+
+  @returns No value.
+  */    
   function multiply() {
     console.log(" MULTIPLY");
   }
 
+ /**
+  Performs the division operation.
+
+  @returns No value.
+  */    
   function divide() {
     console.log("DIVIDE");
   }
 
+ /**
+  Handles the "=" operator.
+
+  @returns No value.
+  */    
   function calculate() {
     console.log("CALCULATE");
-
-    let operand2 = document.querySelector("#operand").value;
-
-    document.querySelector("#operand").value =
-      parseInt(operand1) + parseInt(operand2);
-
-
 
   }
 
